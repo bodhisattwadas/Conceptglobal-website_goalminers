@@ -51,6 +51,14 @@
         dotsData: true,
     });
 
-    
+    // Collapse toggle text & icon update
+    $('.collapse').on('show.bs.collapse', function () {
+        var btn = $('[data-bs-target="#' + $(this).attr('id') + '"]');
+        btn.html('Read Less <i class="fa fa-arrow-up ms-1"></i>');
+    }).on('hide.bs.collapse', function () {
+        var btn = $('[data-bs-target="#' + $(this).attr('id') + '"]');
+        btn.html('Read More <i class="fa fa-arrow-right ms-1"></i>');
+    });
+
 })(jQuery);
 
