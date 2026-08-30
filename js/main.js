@@ -51,13 +51,21 @@
         dotsData: true,
     });
 
-    // Collapse toggle text & icon update
-    $('.collapse').on('show.bs.collapse', function () {
+    // Collapse toggle text & icon update (exclude navbar)
+    $('.collapse:not(#navbarCollapse)').on('show.bs.collapse', function () {
         var btn = $('[data-bs-target="#' + $(this).attr('id') + '"]');
         btn.html('Read Less <i class="fa fa-arrow-up ms-1"></i>');
     }).on('hide.bs.collapse', function () {
         var btn = $('[data-bs-target="#' + $(this).attr('id') + '"]');
         btn.html('Read More <i class="fa fa-arrow-right ms-1"></i>');
+    });
+
+    // Close mobile navbar when a nav link is clicked
+    $('.navbar-nav .nav-link').on('click', function () {
+        var navbarCollapse = $('#navbarCollapse');
+        if (navbarCollapse.hasClass('show')) {
+            navbarCollapse.collapse('hide');
+        }
     });
 
 })(jQuery);
