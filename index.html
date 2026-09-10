@@ -443,54 +443,45 @@ through disciplined repetition and clarity of purpose.</p>
 
         <div class="row g-4">
 
-            <!-- Client 1 -->
+            <!-- Client 1: Wellness & Nutrition -->
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="team-item">
                     <div class="team-body">
 
                         <div class="team-before">
-                            <span>Industry</span>
-                            <span>Service</span>
-                            <span>Solution</span>
-                            <span>Outcome</span>
+                            <span>Clients</span>
                         </div>
 
                         <img class="img-fluid" src="img/Client/p1.jpg" alt="">
 
                         <div class="team-after">
-                            <span>Healthy Restaurant</span>
-                            <span>Financial Clarity</span>
-                            <span>Structured Accounting</span>
-                            <span>Sustainable Growth</span>
+                            <span>Pure Yoga</span>
+                            <span>Flowering Lotus</span>
                         </div>
 
                     </div>
 
                     <a class="team-name" href="#">
-                        <h5 class="text-uppercase mb-0">Wellness & Nutrition</h5>
+                        <h5 class="text-uppercase mb-0">Wellness &amp; Nutrition</h5>
                     </a>
                 </div>
             </div>
 
-            <!-- Client 2 -->
+            <!-- Client 2: Consumer Packaged Goods -->
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="team-item">
                     <div class="team-body">
 
                         <div class="team-before">
-                            <span>Focus</span>
-                            <span>Service</span>
-                            <span>Approach</span>
-                            <span>Outcome</span>
+                            <span>Clients</span>
                         </div>
 
                         <img class="img-fluid" src="img/Client/p4.jpg" alt="">
 
                         <div class="team-after">
-                            <span>Sports Team</span>
-                            <span>Financial Planning</span>
-                            <span>Performance Structuring</span>
-                            <span>Operational Efficiency</span>
+                            <span>Daily Greens</span>
+                            <span>NadaMoo</span>
+                            <span>Base Culture</span>
                         </div>
 
                     </div>
@@ -501,25 +492,22 @@ through disciplined repetition and clarity of purpose.</p>
                 </div>
             </div>
 
-            <!-- Client 3 -->
+            <!-- Client 3: Creative Professionals -->
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="team-item">
                     <div class="team-body">
 
                         <div class="team-before">
-                            <span>Focus</span>
-                            <span>Service</span>
-                            <span>Approach</span>
-                            <span>Outcome</span>
+                            <span>Clients</span>
                         </div>
 
                         <img class="img-fluid" src="img/Client/g1.png" alt="">
 
                         <div class="team-after">
-                          <span>Photography / Art</span>
-                          <span>Financial Structure</span>
-                          <span>Creative Business Systems</span>
-                          <span>Stable Income Flow</span>
+                            <span>Catapult System</span>
+                            <span>iTalk BB</span>
+                            <span>Classic Cars of Mississippi</span>
+                            <span>CyberTint</span>
                         </div>
 
                     </div>
@@ -530,36 +518,31 @@ through disciplined repetition and clarity of purpose.</p>
                 </div>
             </div>
 
-            <!-- Client 4 -->
+            <!-- Client 4: Animal Care & Training -->
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                 <div class="team-item">
                     <div class="team-body">
 
                         <div class="team-before">
-                            <span>Focus</span>
-                            <span>Service</span>
-                            <span>Approach</span>
-                            <span>Outcome</span>
+                            <span>Clients</span>
                         </div>
 
                         <img class="img-fluid" src="img/Client/horse.jpg" alt="">
 
                         <div class="team-after">
-                            <span>Dog Training / Rescue</span>
-                            <span>Financial Systems</span>
-                            <span>Operational Control</span>
-                            <span>Long-Term Stability</span>
+                            <span>Marshall Ranch &amp; Rescue</span>
                         </div>
 
                     </div>
 
                     <a class="team-name" href="#">
-                        <h5 class="text-uppercase mb-0">Animal Care & Training</h5>
+                        <h5 class="text-uppercase mb-0">Animal Care &amp; Training</h5>
                     </a>
                 </div>
             </div>
 
         </div>
+
     </div>
 
 </div>
@@ -639,39 +622,40 @@ through disciplined repetition and clarity of purpose.</p>
                     </table>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <form>
+                    <form id="contactForm" action="contact.php" method="POST" novalidate>
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="text" class="form-control bg-secondary border-0" id="name"
-                                        placeholder="Your Name">
+                                        name="name" placeholder="Your Name" required>
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="email" class="form-control bg-secondary border-0" id="email"
-                                        placeholder="Your Email">
+                                        name="email" placeholder="Your Email" required>
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
                                     <input type="text" class="form-control bg-secondary border-0" id="subject"
-                                        placeholder="Subject">
+                                        name="subject" placeholder="Subject" required>
                                     <label for="subject">Subject</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
                                     <textarea class="form-control bg-secondary border-0"
-                                        placeholder="Leave a message here" id="message"
-                                        style="height: 150px"></textarea>
+                                        placeholder="Leave a message here" id="message" name="message"
+                                        style="height: 150px" required></textarea>
                                     <label for="message">Message</label>
                                 </div>
                             </div>
+                            <div class="col-12" id="formAlert" style="display:none;"></div>
                             <div class="col-12">
-                                <button class="btn btn-outline-primary border-2 w-100 py-3" type="submit">Send
+                                <button class="btn btn-outline-primary border-2 w-100 py-3" type="submit" id="sendBtn">Send
                                     Message</button>
                             </div>
                         </div>

@@ -68,5 +68,47 @@
         }
     });
 
+    // ── Contact Form AJAX Submission ─────────────────────────────────────────
+    $('#contactForm').on('submit', function (e) {
+        e.preventDefault();
+
+        var $form    = $(this);
+        var $btn     = $('#sendBtn');
+        var $alert   = $('#formAlert');
+
+        // Hide previous alert
+        $alert.hide().html('');
+
+        // Button loading state
+        $btn.prop('disabled', true).text('Sending...');
+
+        $.ajax({
+            url  : 'contact.php',
+            type : 'POST',
+            data : $form.serialize(),
+            dataType: 'json',
+            success: function (res) {
+                if (res.success) {
+                    $alert
+                        .html('<div class="alert alert-success mb-0"><i class="fa fa-check-circle me-2"></i>' + res.message + '</div>')
+                        .show();
+                    $form[0].reset();
+                } else {
+                    $alert
+                        .html('<div class="alert alert-danger mb-0"><i class="fa fa-exclamation-circle me-2"></i>' + res.message + '</div>')
+                        .show();
+                }
+            },
+            error: function () {
+                $alert
+                    .html('<div class="alert alert-danger mb-0"><i class="fa fa-exclamation-circle me-2"></i>Something went wrong. Please try again or email us at <a href="mailto:info@goalminers.com">info@goalminers.com</a>.</div>')
+                    .show();
+            },
+            complete: function () {
+                $btn.prop('disabled', false).text('Send Message');
+            }
+        });
+    });
+
 })(jQuery);
 
