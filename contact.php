@@ -42,7 +42,7 @@ if (!empty($errors)) {
 }
 
 // Build the email
-$to          = "das.bodhisattwa@gmail.com"; // TEST — change back to info@goalminers.com for production
+$to          = "info@goalminers.com";
 $emailSubject = "GoalMiners Contact: " . $subject;
 
 $body  = "You have received a new message via the GoalMiners website contact form.\n\n";
