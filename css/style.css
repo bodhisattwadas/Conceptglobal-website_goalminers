@@ -381,6 +381,53 @@ body{
     transition-delay: .2s;
 }
 
+/* Centered overlay — words fly in from both sides and land centered */
+.team-item .team-body .team-center {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 52px);
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* All spans start hidden, odd from left, even from right */
+.team-item .team-body .team-center span {
+    color: #ffffff;
+    font-size: 0.98rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 6px 10px;
+    letter-spacing: 0.04em;
+    opacity: 0;
+    transform: translateX(-120px); /* default: come from left */
+    transition: transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1),
+                opacity   0.35s ease;
+    transition-delay: 0s;
+}
+
+.team-item .team-body .team-center span:nth-child(even) {
+    transform: translateX(120px); /* even items come from right */
+}
+
+/* On hover — all settle to center */
+.team-item:hover .team-body .team-center span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Staggered timing — waits for dark panels to fully merge (~0.5s) then lands each word */
+.team-item:hover .team-body .team-center span:nth-child(1) { transition-delay: 0.42s; }
+.team-item:hover .team-body .team-center span:nth-child(2) { transition-delay: 0.54s; }
+.team-item:hover .team-body .team-center span:nth-child(3) { transition-delay: 0.66s; }
+.team-item:hover .team-body .team-center span:nth-child(4) { transition-delay: 0.78s; }
+
 
 /*** Testimonial ***/
 .testimonial-carousel {
